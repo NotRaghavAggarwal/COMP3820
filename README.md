@@ -1,116 +1,110 @@
-# Getting Started SMART on FHIR apps
-This starter-kit application is a simple SMART on FHIR App.
+# Project 11 - Automated Radiology Reporting with SMART on FHIR
 
-* Fetches Patient FHIR data
-* Displays Patient information using FHIR Visualizer
-* Allows User to Modify Patient information
+Welcome to Project 11 of course COMP3820. Our application focuses on automating radiology reporting from chest X-rays using multimodal models and FHIR integration. This application simplifies the process of managing patient data and medical imaging, utilizing an AI-based API to generate findings and impressions for chest X-rays.
 
-# Demo
-![a gif showing the SMART app in action](https://github.com/SameerDoshi/SameerDoshi.github.io/blob/master/images/SMART-FHIR-Demo.gif?raw=true)
+## Getting Started
 
+To begin, follow these steps:
 
+1. **Run the Docker Image**: Launch the AI-based API server using Docker, which will be hosted on port 8080. The API will be used on port 3000.
 
+   ```shell
+   sh run.sh
+   ```
 
-# Running this app locally (quick)
-1. ``` yarn install ```
-2. ``` yarn start ```
-3. [Goto SMART Launcher](https://launch.smarthealthit.org/)
-4. Leave everything as default, at the bottom of the form change the launch url to 
-```http://localhost:3000```
-5. Click Launch
+2. **Host the Website**: Locally host the SMART on FHIR application.
 
-# Setup Identity Provider
-SMART on FHIR is secure and so this app will need to be able to fetch tokens from the same identity provider as your EMR.   
+   - Install dependencies:
 
-# Running this app locally (EMR/Scenario Specific App Integration)
+     ```shell
+     yarn install
+     ```
 
-## Setup Identitiy Provider
-[This guide](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/use-smart-on-fhir-proxy) walks through the setup process for a SMART on FHIR app using the Azure SMART Proxy for Azure Active Directory.
+   - Start the application:
 
-Not covered: Running with an identity provider other than Azure Activer Directory.
+     ```shell
+     yarn start
+     ```
 
-## Run the app
-1. Change client ID in index.js to the client ID generated in the above steps.
-2. ``` yarn start```
-3. Follow [these steps](https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/launching-a-smart-app-demystified/ba-p/2779729) to create a SMART Launcher from your EMR: 
-4. Click on the link
+3. **Access SMART on FHIR Launcher**: Visit [SMART Launcher](https://launch.smarthealthit.org/).
 
+   - Keep the default settings and adjust the launch URL to `http://localhost:3000` at the form's bottom.
 
+   - Click "Launch."
 
-# What's Next?
-Think about what this app does.  It has all the boiler plate you need to access and modify a FHIR resrouce.
-If you've ever had a piece of functionality you've wanted to add to an EMR you can code it in a SMART on FHIR app- using all the web dev tech you already know. Then just add that app to your EMR.
+## Workflow
 
-An example use of this is the Chestist demo app that packages ML assisted image analysis.
+Follow this workflow within the SMART on FHIR Starter Kit:
 
-#References:
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. **Fetch Patient Data**: The application retrieves patient FHIR data.
 
-[Quickstart on deploying a SMART app in Azure](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/use-smart-on-fhir-proxy)
+2. **Visualize Patient Information**: View patient details using the FHIR Visualizer.
 
-[SMARTHealth's Quickstart](https://docs.smarthealthit.org/)
+3. **Modify Patient Information**: Modify patient records as necessary.
 
-[Cerner's Quickstart](https://engineering.cerner.com/smart-on-fhir-tutorial/)
+4. **AI-Powered Imaging**: Upload DICOM images to receive AI-generated findings and impressions from the AI Server (API Report).
 
-# What have we achieved?
-The project implemented a query and modification function for patient information, which enables researchers to quickly and accurately access and update patients' personal data. In addition, the project introduced artificial intelligence technology to perform deep learning analysis of patient X-ray images to help doctors more accurately identify and locate potential signs of disease, thus improving the accuracy and efficiency of clinical decision-making.
-Finally, the system also supports report querying, generation and uploading. Doctors can easily access the reports they need and quickly generate detailed diagnostic reports. These reports can be uploaded at any time, making it easy for patients and healthcare teams to view and share them at any time.
+5. **X-Ray Viewing**: Choose your preferred view of X-ray images from the report.
+
+6. **Create Observations with LOINC Codes**: Generate observations for findings and associate them with LOINC codes.
+
+7. **Generate Reports**: Quickly generate reports based on observations and AI-generated impressions.
+
+## Next Steps
+
+This starter kit provides a robust foundation for developing SMART on FHIR applications. You can use it to create advanced applications such as ML-assisted image analysis tools.
+
+## References
+
+For additional resources and guides, refer to the following:
+
+- [Create React App](https://github.com/facebook/create-react-app): The project is bootstrapped with this tool.
+
+- [Quickstart on deploying a SMART app in Azure](https://docs.microsoft.com/en-us/azure/healthcare-apis/azure-api-for-fhir/use-smart-on-fhir-proxy).
+
+- [SMARTHealth Quickstart](https://docs.smarthealthit.org/).
+
+- [Cerner Quickstart](https://engineering.cerner.com/smart-on-fhir-tutorial/).
+
+## Achievements
+
+With this project, you can:
+
+- Efficiently query and modify patient information, making it easy for researchers to access and update patient data.
+
+- Utilize advanced AI technology for in-depth analysis of X-ray images, assisting healthcare professionals in identifying disease signs.
+
+- Support report generation and sharing, providing a convenient solution for accessing detailed diagnostic reports.
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+Contributions and suggestions are welcome. Please review and agree to the [Contributor License Agreement (CLA)](https://cla.opensource.microsoft.com) before submitting contributions.
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+The project follows the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct). For inquiries or additional information, contact [opencode@microsoft.com](mailto:opencode@microsoft.com).
 
 ## Trademarks
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+Usage of Microsoft trademarks or logos must adhere to [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general). Usage of third-party trademarks or logos is subject to their respective policies.
 
-## To build and run the docker image:
+## Additional Information
 
-```shell
-sh run.sh
-```
+- **Docker Image I/O**:
+  - Input: DICOM or PNG images.
+  - Output: JSON output with findings and impression section fields.
 
-## Docker image I/O:
- - Input: a single DICOM or PNG image.
- - Output: JSON output with **findings** and **impression** section fields.
+- **Example requests using `curl` for DICOM images**:
 
-## Example requests using `curl` for a DICOM image:
+  ```shell
+  curl --location '127.0.0.1:3000/dicom_to_report' --form 'input_file=@"./example.dcm"'
+  ```
 
-```shell
-curl --location '127.0.0.1:80/dicom_to_report' --form 'input_file=@"./e084de3b-be89b11e-20fe3f9f-9c8d8dfe-4cfd202c.dcm"'
-```
+- **Example requests using `curl` for PNG images**:
 
-## Example requests using `curl` for a PNG image:
+  ```shell
+  curl --location '127.0.0.1:3000/image_to_report' --form 'input_file=@"./example.png"'
+  ```
 
-```shell
-curl --location '127.0.0.1:80/image_to_report' --form 'input_file=@"./CXR1_1_IM-0001-3001.png"'
-```
-
-## Other information about the Docker image:
- - On an NVIDIA RTX 3090, uses 2GB of VRAM.
- - Uses 3.3GB of RAM.
- - The model that is being used: https://huggingface.co/aehrc/cxrmate-single-tf. 
- - The paper (under review) that the model is from: https://arxiv.org/pdf/2307.09758.pdf.
- - Note that this is the simplest model from the paper, there are several improvements (let me know if you want to try to handle one of these cases):
-    - Conditioning all the X-rays of a patient's study: https://huggingface.co/aehrc/cxrmate-multi-tf,
-    - Additionally conditioning on the report from the patient's previous study: https://huggingface.co/aehrc/cxrmate-tf.
-    - Additionally training with reinforcement learning: https://huggingface.co/aehrc/cxrmate.
-
-## To run outside of Docker (this will allow you to use Apple silicon GPUs):
- 1. Install the packages from `requirements.txt` in a virtual environment, e.g., https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/.
- 2. Run: ```uvicorn api.api:api --host 0.0.0.0 --port 80 --log-level trace```
-
+- **Additional Information**:
+  - The Docker image requires GPU resources, such as an NVIDIA RTX 3090 (2GB of VRAM) and 3.3GB of RAM.
+  - The model used is [aehrc/cxrmate-single-tf](https://huggingface.co/aehrc/cxrmate-single-tf).
+  - For more advanced model options, refer to the provided resources.
