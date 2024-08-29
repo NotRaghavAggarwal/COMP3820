@@ -1,4 +1,4 @@
-# Project 11 - Automated Radiology Reporting with SMART on FHIR
+# Automated Radiology Reporting with SMART on FHIR
 
 Welcome to Project 11 of course COMP3820. Our application focuses on automating radiology reporting from chest X-rays using multimodal models and FHIR integration. This application simplifies the process of managing patient data and medical imaging, utilizing an AI-based API to generate findings and impressions for chest X-rays.
 
